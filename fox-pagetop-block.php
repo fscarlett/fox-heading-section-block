@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Fox Pagetop Block
+ * Plugin Name:       Fox Heading Block
  * Description:       A Gutenberg block for a heading and subhead section.
  * Version:           0.1.0
  * Requires at least: 6.7

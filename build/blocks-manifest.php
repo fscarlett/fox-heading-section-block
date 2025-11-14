@@ -6,7 +6,7 @@ return array(
 		'apiVersion' => 3,
 		'name' => 'create-block/fox-pagetop-block',
 		'version' => '0.1.0',
-		'title' => 'Fox Pagetop Block',
+		'title' => 'Fox Heading Block',
 		'category' => 'widgets',
 		'icon' => 'smiley',
 		'description' => 'A Gutenberg block for a heading and subhead section',
