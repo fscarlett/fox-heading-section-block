@@ -11,6 +11,28 @@
   "supports": {
     "html": false
   },
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": ""
+    },
+    "headingIsH1": {
+      "type": "boolean",
+      "default": false
+    },
+    "headingIsPagetitle": {
+      "type": "boolean",
+      "default": false
+    },
+    "subhead": {
+      "type": "string",
+      "default": ""
+    },
+    "paragraph": {
+      "type": "string",
+      "default": ""
+    }
+  },
   "textdomain": "fox-pagetop-block",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",

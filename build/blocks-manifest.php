@@ -16,6 +16,28 @@ return array(
 		'supports' => array(
 			'html' => false
 		),
+		'attributes' => array(
+			'heading' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'headingIsH1' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'headingIsPagetitle' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'subhead' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'paragraph' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
 		'textdomain' => 'fox-pagetop-block',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
