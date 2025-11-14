@@ -1,0 +1,26 @@
+<?php
+// This file is generated. Do not modify it manually.
+return array(
+	'fox-pagetop-block' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'create-block/fox-pagetop-block',
+		'version' => '0.1.0',
+		'title' => 'Fox Pagetop Block',
+		'category' => 'widgets',
+		'icon' => 'smiley',
+		'description' => 'A Gutenberg block for a heading and subhead section',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'textdomain' => 'fox-pagetop-block',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php',
+		'viewScript' => 'file:./view.js'
+	)
+);
