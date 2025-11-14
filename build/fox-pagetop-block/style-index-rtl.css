@@ -8,7 +8,9 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-create-block-fox-pagetop-block {
-  background-color: #21759b;
-  color: #fff;
-  padding: 20px;
+  margin: 0;
+  text-align: center;
+  background-color: #fff;
+  color: #111;
+  padding: 100px 20px;
 }
