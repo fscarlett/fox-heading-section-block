@@ -25,7 +25,7 @@
 				<?php if (!$attributes['headingIsH1']) { ?>
 					<h2><?php echo esc_html($heading); ?></h2>
 				<?php } ?>
-				<h3><?php echo esc_html($attributes['subhead']); ?></h3>
+				<h3 class="subhead"><?php echo esc_html($attributes['subhead']); ?></h3>
 				<p><?php echo esc_html($attributes['paragraph']); ?></p>
 			</section>
 	

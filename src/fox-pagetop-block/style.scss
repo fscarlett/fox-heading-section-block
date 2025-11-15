@@ -9,7 +9,7 @@
 	margin: 0;
 	text-align: center;
 	background-color: #fff;
-	color: #111;
+	// color: #111;
 	padding: 100px 20px;
 	h1 {
 		font-size: 3em;
@@ -18,18 +18,8 @@
 	}
 	h2 {
 		font-size: 2.5em;
-		// color: #3333cc;
 		margin-bottom: 20px;
 		font-weight: bold;
-	}
-
-	h3 {
-		font-size: 1.5em;
-		color: #ff6600;
-		font-style: italic;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		word-spacing: 15px;
 	}
 	p {
 		font-size: 1.4rem;
@@ -37,6 +27,15 @@
 		max-width: 600px;
 		margin: 0 auto;
 	}
+}
+
+.subhead {
+	font-size: 1.5em;
+	color: #ff6600;
+	font-style: italic;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	word-spacing: 15px;
 }
 
 @media screen and (max-width: 600px) {
