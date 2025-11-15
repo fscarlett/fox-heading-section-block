@@ -30,7 +30,7 @@ import {
 	__experimentalDivider as Divider,
 } from "@wordpress/components";
 
-// import { useSelect } from "@wordpress/data";
+import { useSelect } from "@wordpress/data";
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -51,11 +51,88 @@ import "./editor.scss";
 export default function Edit(props) {
 	const { className, ...blockProps } = useBlockProps();
 
+	// Get the current post/page title
+	const page_title = useSelect((select) => {
+		const currentPostId = select("core/editor").getCurrentPostId();
+		const currentPost = select("core").getEntityRecord(
+			"postType",
+			select("core/editor").getCurrentPostType(),
+			currentPostId,
+		);
+		return currentPost?.title?.rendered || "";
+	}, []);
+
 	return (
-		<section className={`${className}`} {...blockProps}>
-			<h2>hello world</h2>
-			<p>subhead</p>
-			<p>lorem ipsum mother helper</p>
-		</section>
+		<>
+			<section className={`${className}`} {...blockProps}>
+				{!!props.attributes.isH1 && (
+					<h1>
+						{props.attributes.headingIsPagetitle
+							? page_title
+							: props.attributes.heading}
+					</h1>
+				)}
+
+				{!props.attributes.isH1 && <h2>{props.attributes.heading}</h2>}
+				<p>{props.attributes.subhead}</p>
+				<p>{props.attributes.paragraph}</p>
+			</section>
+			<InspectorControls>
+				<PanelBody title="Heading Section Settings" opened="true">
+					<TextControl
+						label="Heading"
+						value={props.attributes.heading}
+						onChange={(newValue) => {
+							props.setAttributes({ heading: newValue });
+						}}
+						disabled={props.attributes.headingIsPagetitle && "disabled"}
+						style={{
+							backgroundColor: props.attributes.headingIsPagetitle
+								? "#bbb"
+								: "transparent",
+						}}
+					/>
+
+					<ToggleControl
+						label="Make Heading H1"
+						checked={props.attributes.isH1}
+						onChange={(newValue) => {
+							props.setAttributes({
+								isH1: newValue,
+							});
+						}}
+					/>
+
+					{!!props.attributes.isH1 && (
+						<ToggleControl
+							label="Use Page Title for Heading"
+							checked={props.attributes.headingIsPagetitle}
+							onChange={(newValue) => {
+								props.setAttributes({
+									headingIsPagetitle: newValue,
+								});
+							}}
+						/>
+					)}
+
+					<TextControl
+						label="Subheading"
+						value={props.attributes.subhead}
+						onChange={(newValue) => {
+							props.setAttributes({ subhead: newValue });
+						}}
+					/>
+
+					<TextareaControl
+						label="Paragraph"
+						value={props.attributes.paragraph}
+						onChange={(newValue) => {
+							props.setAttributes({ paragraph: newValue });
+						}}
+					/>
+					<Divider />
+				</PanelBody>
+			</InspectorControls>
+		</>
 	);
 }
