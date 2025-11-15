@@ -11,4 +11,42 @@
 	background-color: #fff;
 	color: #111;
 	padding: 100px 20px;
+	h1 {
+		font-size: 3em;
+		margin-bottom: 20px;
+		font-weight: bold;
+	}
+	h2 {
+		font-size: 2.5em;
+		// color: #3333cc;
+		margin-bottom: 20px;
+		font-weight: bold;
+	}
+
+	h3 {
+		font-size: 1.5em;
+		color: #ff6600;
+		font-style: italic;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		word-spacing: 15px;
+	}
+	p {
+		font-size: 1.4rem;
+		line-height: 1.6;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.wp-block-create-block-fox-pagetop-block {
+		padding: 50px 0;
+		h2 {
+			font-size: 2em;
+		}
+		p {
+			font-size: 1.2rem;
+		}
+	}
 }

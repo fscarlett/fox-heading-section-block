@@ -74,7 +74,7 @@ export default function Edit(props) {
 				)}
 
 				{!props.attributes.isH1 && <h2>{props.attributes.heading}</h2>}
-				<p>{props.attributes.subhead}</p>
+				<h3>{props.attributes.subhead}</h3>
 				<p>{props.attributes.paragraph}</p>
 			</section>
 			<InspectorControls>

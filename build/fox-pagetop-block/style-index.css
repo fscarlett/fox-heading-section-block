@@ -14,5 +14,40 @@
   color: #111;
   padding: 100px 20px;
 }
+.wp-block-create-block-fox-pagetop-block h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.wp-block-create-block-fox-pagetop-block h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.wp-block-create-block-fox-pagetop-block h3 {
+  font-size: 1.5em;
+  color: #ff6600;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 15px;
+}
+.wp-block-create-block-fox-pagetop-block p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .wp-block-create-block-fox-pagetop-block {
+    padding: 50px 0;
+  }
+  .wp-block-create-block-fox-pagetop-block h2 {
+    font-size: 2em;
+  }
+  .wp-block-create-block-fox-pagetop-block p {
+    font-size: 1.2rem;
+  }
+}
 
 /*# sourceMappingURL=style-index.css.map*/
